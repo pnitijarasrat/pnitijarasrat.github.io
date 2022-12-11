@@ -6,6 +6,7 @@
     font-weight: 300;
     text-decoration: none;
     list-style: square;
+    box-sizing: border-box;
 }
 
 .button {
@@ -15,16 +16,13 @@
     padding: 3px 10px;
     border-radius: 15px;
     transition: 0.2s;
+    font-weight: 600;
+    color: #000000;
 }
 
 .button:hover {
     transform: scale(1.2);
     box-shadow: #ffbfbf 0px 10px 36px 0px, #ffbfbf 0px 0px 0px 1px;
-}
-
-.button a {
-    font-weight: 600;
-    color: #000000;
 }
 
 body {
@@ -36,13 +34,13 @@ body {
     font-size: 1.2em;
 }
 
-
-
 .i-text {
     font-style: italic;
     font-size: 0.9em;
     color: grey;
 }
+
+/* Resume Style */
 
 #profile-container {
     position: fixed;
@@ -52,7 +50,9 @@ body {
     height: 670px;
     margin: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: loadFromLeft 0.75s;
 }
+
 
 .header {
     margin: 0;
@@ -100,8 +100,65 @@ body {
     padding: 2%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: loadFromRight 0.75s;
 }
+
+
 
 .content-description {
     padding-top: 1%;
+}
+
+/* animation test */
+
+@keyframes loadFromRight {
+    from {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loadFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Home Style */
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #000000;
+    color: #ff8282;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+nav div {
+    width: 33%;
+}
+
+.welcome {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.home-body {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0fc9ded4-899e-408f-8b33-c893599d0397/defkhv0-2c812d8e-e673-43b5-88ee-b0e406ba588a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBmYzlkZWQ0LTg5OWUtNDA4Zi04YjMzLWM4OTM1OTlkMDM5N1wvZGVma2h2MC0yYzgxMmQ4ZS1lNjczLTQzYjUtODhlZS1iMGU0MDZiYTU4OGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Gw5FQp4FYOyN-0CAdZsuo1a62GNG9Qy5kC9Vjia4IsQ');
 }
