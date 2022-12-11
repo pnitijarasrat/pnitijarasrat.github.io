@@ -50,7 +50,7 @@ body {
     height: 670px;
     margin: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    animation: loadFromLeft 0.75s;
+    animation: loadFromLeft 750ms ease-in 400ms;
 }
 
 
@@ -100,7 +100,7 @@ body {
     padding: 2%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    animation: loadFromRight 0.75s;
+    animation: loadFromRight 750ms ease-in 400ms;
 }
 
 
