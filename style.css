@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 
+
+
 * {
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
@@ -7,26 +9,28 @@
     text-decoration: none;
     list-style: square;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .button {
     margin-top: 2%;
     width: fit-content;
-    background-color: #ff8282;
+    background-color: #edf2f4;
     padding: 3px 10px;
     border-radius: 15px;
     transition: 0.2s;
     font-weight: 600;
-    color: #000000;
+    color: #2b2d42;
 }
 
 .button:hover {
     transform: scale(1.2);
-    box-shadow: #ffbfbf 0px 10px 36px 0px, #ffbfbf 0px 0px 0px 1px;
 }
 
-body {
+.resume-body {
     display: flex;
+    height: 100vh;
+    width: 100%;
 }
 
 .bold-text {
@@ -43,11 +47,9 @@ body {
 /* Resume Style */
 
 #profile-container {
-    position: fixed;
     border: 1px solid rgb(240, 240, 240);
     border-radius: 3px;
     width: 35%;
-    height: 670px;
     margin: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     animation: loadFromLeft 750ms ease-in 400ms;
@@ -58,14 +60,14 @@ body {
     margin: 0;
     padding: 5%;
     color: white;
-    background-color: #000000;
+    background-color: #2b2d42;
 }
 
 
 .name {
     font-size: 3em;
     font-weight: 600;
-    color: #ff8282;
+    color: #edf2f4;
 }
 
 .job {
@@ -86,10 +88,9 @@ body {
 #content-container {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     width: 57%;
     height: auto;
-    margin: 2% 2% 2% 39%;
+    margin: 2%;
     row-gap: 15px;
 }
 
@@ -139,19 +140,12 @@ body {
 
 nav {
     display: flex;
-    position: sticky;
-    top: 0;
     align-items: baseline;
     justify-content: space-between;
+    margin: -60px 0 60px 0;
     width: 100%;
-    background-color: #000000;
-    color: #ff8282;
-    padding: 15px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-nav div {
-    width: 33%;
+    color: #edf2f4;
+    font-size: 0.5em;
 }
 
 .welcome {
@@ -160,5 +154,55 @@ nav div {
 }
 
 .home-body {
-    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0fc9ded4-899e-408f-8b33-c893599d0397/defkhv0-2c812d8e-e673-43b5-88ee-b0e406ba588a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBmYzlkZWQ0LTg5OWUtNDA4Zi04YjMzLWM4OTM1OTlkMDM5N1wvZGVma2h2MC0yYzgxMmQ4ZS1lNjczLTQzYjUtODhlZS1iMGU0MDZiYTU4OGEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Gw5FQp4FYOyN-0CAdZsuo1a62GNG9Qy5kC9Vjia4IsQ');
+    width: 100%;
+    height: 100vh;
+    background-color: #8d99ae;
+    color: #edf2f4;
+}
+
+.home-flexbox {
+    display: flex;
+}
+
+.home-content {
+    text-align: right;
+    margin: 7% 0 0 5%;
+    font-size: 2em;
+    font-weight: 400;
+    width: 45%;
+    height: 700px;
+    padding: 60px;
+}
+
+.home-picture {
+    width: 45%;
+    margin: 7% 5% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('https://www.nme.com/wp-content/uploads/2021/07/bts-v-taehyung-popular-hybe-071321.jpg'); */
+    background-size: cover;
+}
+
+#arrowDownButton {
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 10% 0;
+    animation: arrowDownButtonAnimation 1000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowDownButtonAnimation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(10%);
+    }
+
+    99% {
+        transform: translateY(0%);
+    }
 }
