@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/retro-new-version');
 
 
 * {
     margin: 0;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Retro New Version', sans-serif;
     font-weight: 300;
     text-decoration: none;
     list-style: square;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.arrowButton {
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 2% 0;
+}
+
+.arrowButton:hover {
+    color: #2b2d42;
 }
 
 .button {
@@ -27,12 +38,6 @@
     transform: scale(1.2);
 }
 
-.resume-body {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-}
-
 .bold-text {
     font-weight: 600;
     font-size: 1.2em;
@@ -46,15 +51,21 @@
 
 /* Resume Style */
 
+.resume-body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
 #profile-container {
     border: 1px solid rgb(240, 240, 240);
     border-radius: 3px;
     width: 35%;
+    height: 100vh;
     margin: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    animation: loadFromLeft 750ms ease-in 400ms;
+    line-height: 30px;
 }
-
 
 .header {
     margin: 0;
@@ -62,7 +73,6 @@
     color: white;
     background-color: #2b2d42;
 }
-
 
 .name {
     font-size: 3em;
@@ -92,6 +102,7 @@
     height: auto;
     margin: 2%;
     row-gap: 15px;
+    line-height: 25px;
 }
 
 .content {
@@ -101,28 +112,13 @@
     padding: 2%;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    animation: loadFromRight 750ms ease-in 400ms;
 }
-
-
 
 .content-description {
     padding-top: 1%;
 }
 
-/* animation test */
-
-@keyframes loadFromRight {
-    from {
-        transform: translateX(200%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+/* animation */
 
 @keyframes loadFromLeft {
     from {
@@ -133,7 +129,28 @@
     to {
         transform: translateX(0);
         opacity: 1;
+        visibility: visible;
     }
+}
+
+.loadFromLeft {
+    animation: loadFromLeft 1500ms;
+}
+
+@keyframes loadFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.loadFromRight {
+    animation: loadFromRight 1500ms
 }
 
 /* Home Style */
@@ -146,6 +163,22 @@ nav {
     width: 100%;
     color: #edf2f4;
     font-size: 0.5em;
+}
+
+.headliner {
+    animation: loadHeadliner 1500ms;
+}
+
+@keyframes loadHeadliner {
+    0% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .welcome {
@@ -170,7 +203,7 @@ nav {
     font-size: 2em;
     font-weight: 400;
     width: 45%;
-    height: 700px;
+    height: 600px;
     padding: 60px;
 }
 
@@ -184,13 +217,14 @@ nav {
     background-size: cover;
 }
 
+.show {
+    display: block;
+}
+
 #arrowDownButton {
-    border: none;
-    background-color: transparent;
-    color: white;
+    visibility: hidden;
     padding: 10% 0;
-    animation: arrowDownButtonAnimation 1000ms;
-    animation-iteration-count: infinite;
+    animation: arrowDownButtonAnimation 1000ms infinite;
 }
 
 @keyframes arrowDownButtonAnimation {
@@ -205,4 +239,70 @@ nav {
     99% {
         transform: translateY(0%);
     }
+}
+
+@keyframes arrowUpButtonAnimation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    99% {
+        transform: translateY(0%);
+    }
+}
+
+/* About Me Style */
+
+.aboutme-body {
+    background-color: #8d99ae;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#aboutmeArrowUp {
+    visibility: hidden;
+    animation: arrowUpButtonAnimation 1000ms infinite;
+}
+
+#aboutmeArrowDown {
+    visibility: hidden;
+    animation: arrowDownButtonAnimation 1000ms infinite;
+}
+
+.aboutme-container {
+    display: flex;
+}
+
+#aboutme-content {
+    width: 45%;
+    height: 70vh;
+    margin: 0 0 0 5%;
+    padding: 0px 60px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    word-spacing: 2px;
+}
+
+#aboutme-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    margin: 0 5% 0 0;
+}
+
+.aboutme-header {
+    font-size: 2em;
+    color: #2b2d42;
+    font-weight: bold;
 }
