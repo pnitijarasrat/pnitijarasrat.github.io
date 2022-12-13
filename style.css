@@ -1,4 +1,5 @@
-@import url('http://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 :root {
     --main-bg-color: #cadc9f;
@@ -16,7 +17,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow: hidden;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', cursive;
 }
 
 .arrowButton {
@@ -276,6 +277,7 @@ nav {
 
 /* About Me Style */
 
+
 .aboutme-body {
     background-color: var(--main-bg-color);
     width: 100%;
@@ -302,9 +304,9 @@ nav {
 }
 
 #aboutme-content {
-    width: 45%;
+    width: 90%;
     height: 70vh;
-    margin: 0 0 0 5%;
+    margin: 0 5%;
     padding: 0px 60px;
     color: var(--normal-font-color);
     font-size: 1.2em;
@@ -313,12 +315,24 @@ nav {
     line-height: 40px;
 }
 
-#aboutme-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    margin: 0 5% 0 0;
+#aboutme-content div {
+    opacity: 0;
+}
+
+@keyframes aboutmeAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.aboutmeAnimation {
+    animation: aboutmeAnimation 2000ms;
 }
 
 .aboutme-header {
