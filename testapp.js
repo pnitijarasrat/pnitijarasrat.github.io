@@ -1,7 +1,10 @@
-const aboutmeUp = document.querySelector('#aboutmeArrowUp')
-const aboutmeDown = document.querySelector('#aboutmeArrowDown')
+const homeP = document.querySelector('.home-p')
+
+function bindTest(el) {
+    el.addEventListener('click', () => { console.log('clicked') })
+}
 
 setInterval(() => {
-    aboutmeUp.style.visibility = 'visible'
-    aboutmeDown.style.visibility = 'visible'
-}, 1500);
+    homeP.style.visibility = 'visible'
+}, 4000);
+

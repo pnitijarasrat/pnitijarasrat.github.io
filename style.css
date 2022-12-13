@@ -1,26 +1,33 @@
-@import url('https://fonts.cdnfonts.com/css/retro-new-version');
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P);
 
+:root {
+    --main-bg-color: #cadc9f;
+    --head-font-color: #0f230f;
+    --normal-font-color: #306203;
+    --light-font-color: #8bac0f;
+    --ligther-font-color: #9bbc0f
+}
 
 * {
     margin: 0;
-    font-family: 'Retro New Version', sans-serif;
     font-weight: 300;
     text-decoration: none;
     list-style: square;
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow: hidden;
+    font-family: 'Press Start 2P';
 }
 
 .arrowButton {
     border: none;
     background-color: transparent;
-    color: white;
+    color: var(--head-font-color);
     padding: 2% 0;
 }
 
 .arrowButton:hover {
-    color: #2b2d42;
+    color: white;
 }
 
 .button {
@@ -165,32 +172,11 @@ nav {
     font-size: 0.5em;
 }
 
-.headliner {
-    animation: loadHeadliner 1500ms;
-}
-
-@keyframes loadHeadliner {
-    0% {
-        opacity: 0;
-        transform: translateX(10%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.welcome {
-    font-size: 2em;
-    font-weight: 600;
-}
-
 .home-body {
     width: 100%;
     height: 100vh;
-    background-color: #8d99ae;
-    color: #edf2f4;
+    background-color: var(--main-bg-color);
+    color: var(--head-font-color);
 }
 
 .home-flexbox {
@@ -198,28 +184,61 @@ nav {
 }
 
 .home-content {
-    text-align: right;
-    margin: 7% 0 0 5%;
     font-size: 2em;
     font-weight: 400;
-    width: 45%;
-    height: 600px;
-    padding: 60px;
+    width: 100%;
+    height: 100vh;
+    padding: 200px 0;
+    text-align: center;
 }
 
-.home-picture {
-    width: 45%;
-    margin: 7% 5% 0 0;
+#intros {
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* background-image: url('https://www.nme.com/wp-content/uploads/2021/07/bts-v-taehyung-popular-hybe-071321.jpg'); */
-    background-size: cover;
+    margin: 0 10%;
+    letter-spacing: 10px;
+    font-size: 3em;
 }
 
-.show {
-    display: block;
+#intros h1 {
+    border-right: .15em solid var(--head-font-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    /* animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal; */
 }
+
+.introAnimation {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.home-p1,
+.home-p2 {
+    margin-bottom: 2%;
+    visibility: hidden;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: var(--head-font-color);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
 
 #arrowDownButton {
     visibility: hidden;
@@ -258,7 +277,7 @@ nav {
 /* About Me Style */
 
 .aboutme-body {
-    background-color: #8d99ae;
+    background-color: var(--main-bg-color);
     width: 100%;
     height: 100vh;
     padding: 10px 0 10px 0;
@@ -287,10 +306,11 @@ nav {
     height: 70vh;
     margin: 0 0 0 5%;
     padding: 0px 60px;
-    color: white;
+    color: var(--normal-font-color);
     font-size: 1.2em;
     font-weight: bold;
     word-spacing: 2px;
+    line-height: 40px;
 }
 
 #aboutme-picture {
@@ -303,6 +323,6 @@ nav {
 
 .aboutme-header {
     font-size: 2em;
-    color: #2b2d42;
+    color: var(--head-font-color);
     font-weight: bold;
 }
