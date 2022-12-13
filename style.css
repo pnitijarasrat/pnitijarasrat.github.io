@@ -10,6 +10,8 @@
 }
 
 * {
+    background-color: var(--main-bg-color);
+    color: var(--head-font-color);
     margin: 0;
     font-weight: 300;
     text-decoration: none;
@@ -31,20 +33,17 @@
     color: white;
 }
 
-.button {
-    margin-top: 2%;
-    width: fit-content;
-    background-color: #edf2f4;
-    padding: 3px 10px;
-    border-radius: 15px;
-    transition: 0.2s;
-    font-weight: 600;
-    color: #2b2d42;
+button {
+    padding: 10px;
+    background-color: var(--head-font-color);
+    color: var(--main-bg-color);
 }
 
-.button:hover {
-    transform: scale(1.2);
+button:hover {
+    color: var(--head-font-color);
+    background-color: var(--main-bg-color);
 }
+
 
 .bold-text {
     font-weight: 600;
@@ -339,4 +338,182 @@ nav {
     font-size: 2em;
     color: var(--head-font-color);
     font-weight: bold;
+}
+
+/* skill style */
+
+.skill-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    color: var(--head-font-color);
+}
+
+#skill-container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 600px;
+    justify-content: space-between;
+    height: 80%;
+}
+
+#skill-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#skillArrowUp {
+    /* visibility: hidden; */
+    animation: arrowUpButtonAnimation 1000ms infinite;
+}
+
+#skillArrowDown {
+    /* visibility: hidden; */
+    animation: arrowDownButtonAnimation 1000ms infinite;
+}
+
+.bar {
+    white-space: nowrap;
+    box-sizing: border-box;
+    border: 4px solid var(--head-font-color);
+    background-color: var(--head-font-color);
+    width: 300px;
+}
+
+.level {
+    padding: 5px;
+    color: white;
+    background-color: var(--light-font-color);
+}
+
+
+.beginner {
+    animation: newbie 1000ms;
+}
+
+.skillful {
+    animation: skillful 1000ms;
+}
+
+.experience {
+    animation: experience 1000ms;
+}
+
+.vexperience {
+    animation: vexperience 1000ms;
+}
+
+/* skill lever */
+.html {
+    width: 270px;
+}
+
+.css {
+    width: 270px;
+}
+
+.js {
+    width: 210px;
+}
+
+.react {
+    width: 120px;
+}
+
+.python {
+    width: 210px;
+}
+
+.php {
+    width: 240px;
+}
+
+.sql {
+    width: 240px;
+}
+
+@keyframes newbie {
+    from {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 120px
+    }
+}
+
+@keyframes skillful {
+    from {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 210px
+    }
+}
+
+@keyframes experience {
+    from {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 240px
+    }
+}
+
+@keyframes vexperience {
+    from {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 270px
+    }
+}
+
+#skill-backdrop {
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hideBtn {
+    width: 40%;
+}
+
+#view-backdrop {
+    margin-bottom: 2%;
+}
+
+#backdrop-status {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 40%;
+    justify-content: space-between;
+    padding: 80px 120px;
+    border-radius: 10px;
+}
+
+#backdrop-status div {
+    display: flex;
+    justify-content: space-between;
 }

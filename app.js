@@ -2,6 +2,8 @@
 const resumeBody = document.querySelector('.resume-body');
 const homeBody = document.querySelector('.home-body');
 const aboutmeBody = document.querySelector('.aboutme-body')
+const skillBackdrop = document.querySelector('#skill-backdrop')
+const skillBody = document.querySelector('.skill-body')
 // content selector
 const profileContainer = document.querySelector('#profile-container')
 const homeContainer = document.querySelector('#headline')
@@ -15,10 +17,23 @@ const p3 = document.querySelector('#p3')
 const p4 = document.querySelector('#p4')
 const p5 = document.querySelector('#p5')
 const p6 = document.querySelector('#p6')
+const html = document.querySelector('.html')
+const css = document.querySelector('.css')
+const js = document.querySelector('.js')
+const react = document.querySelector('.react')
+const python = document.querySelector('.python')
+const php = document.querySelector('.php')
+const sql = document.querySelector('.sql')
 // button selector
 const homeDown = document.querySelector('#arrowDownButton');
 const aboutmeUp = document.querySelector('#aboutmeArrowUp')
 const aboutmeDown = document.querySelector('#aboutmeArrowDown')
+const hideBackdrop = document.querySelector('#hideBtn')
+const viewBackdrop = document.querySelector('#view-backdrop')
+const skillUp = document.querySelector('#skillArrowUp')
+const skillDown = document.querySelector('#skillArrowDown')
+
+
 
 
 function bindTest(el) {
@@ -79,10 +94,44 @@ aboutmeUp.addEventListener('click', () => {
     setInterval(() => {
         homeP.style.visibility = 'visible'
     }, 4000);
-    aboutmeUp.style.visibility = 'hidden'
-    aboutmeDown.style.visibility = 'hidden'
+
 })
 
+aboutmeDown.addEventListener('click', () => {
+    skillBackdrop.scrollIntoView();
+})
+
+// What happen in skill page
+
+skillUp.addEventListener('click', () => {
+    aboutmeBody.scrollIntoView();
+})
+
+skillDown.addEventListener('click', () => {
+
+})
+
+hideBackdrop.addEventListener('click', () => {
+    skillBackdrop.style.zIndex = -1
+    html.className += ' vexperience'
+    css.className += ' vexperience'
+    js.className += ' skillful'
+    react.className += ' beginner'
+    python.className += ' skillful'
+    php.className += ' experience'
+    sql.className += ' experience'
+})
+
+viewBackdrop.addEventListener('click', () => {
+    skillBackdrop.style.zIndex = 1;
+    html.className = 'level html'
+    css.className = 'level css'
+    js.className = 'level js'
+    react.className = 'level react'
+    python.className = 'level python'
+    php.className = 'level php'
+    sql.className = 'level sql'
+})
 
 
 
