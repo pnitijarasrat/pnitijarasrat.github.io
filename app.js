@@ -4,6 +4,7 @@ const homeBody = document.querySelector('.home-body');
 const aboutmeBody = document.querySelector('.aboutme-body')
 const skillBackdrop = document.querySelector('#skill-backdrop')
 const skillBody = document.querySelector('.skill-body')
+const inventoryBody = document.querySelector('.inventory-body')
 // content selector
 const profileContainer = document.querySelector('#profile-container')
 const homeContainer = document.querySelector('#headline')
@@ -24,6 +25,10 @@ const react = document.querySelector('.react')
 const python = document.querySelector('.python')
 const php = document.querySelector('.php')
 const sql = document.querySelector('.sql')
+const tutor = document.querySelector('#tutor')
+const port = document.querySelector('#port')
+const tutorFinder = document.querySelector('#tutorFinder')
+const portfolio = document.querySelector('#puriwatPortfolio')
 // button selector
 const homeDown = document.querySelector('#arrowDownButton');
 const aboutmeUp = document.querySelector('#aboutmeArrowUp')
@@ -32,6 +37,9 @@ const hideBackdrop = document.querySelector('#hideBtn')
 const viewBackdrop = document.querySelector('#view-backdrop')
 const skillUp = document.querySelector('#skillArrowUp')
 const skillDown = document.querySelector('#skillArrowDown')
+const invenUp = document.querySelector('#invenUp')
+const invenDown = document.querySelector('#invenDown')
+
 
 
 
@@ -108,7 +116,7 @@ skillUp.addEventListener('click', () => {
 })
 
 skillDown.addEventListener('click', () => {
-
+    inventoryBody.scrollIntoView();
 })
 
 hideBackdrop.addEventListener('click', () => {
@@ -133,7 +141,30 @@ viewBackdrop.addEventListener('click', () => {
     sql.className = 'level sql'
 })
 
+// What happen in inventory page
+tutor.addEventListener('mouseover', () => {
+    tutorFinder.style.zIndex = 1
+})
 
+tutor.addEventListener('mouseleave', () => {
+    tutorFinder.style.zIndex = -1
+})
+
+port.addEventListener('mouseover', () => {
+    portfolio.style.zIndex = 1
+})
+
+port.addEventListener('mouseleave', () => {
+    portfolio.style.zIndex = -1
+})
+
+invenUp.addEventListener('click', () => {
+    skillBackdrop.scrollIntoView();
+})
+
+invenDown.addEventListener('click', () => {
+
+})
 
 
 
