@@ -2,11 +2,11 @@
 @import "/path/to/pixel-borders.scss";
 
 :root {
-    --dark-bg-color: #224839;
-    --main-bg-color: #89C177;
-    --head-font-color: #275845;
-    --normal-font-color: #4DA350;
-    --light-font-color: #66B270;
+    --dark-bg-color: #484E36;
+    --main-bg-color: #C5CBA4;
+    --head-font-color: #191919;
+    --normal-font-color: #8C926B;
+    --light-font-color: #C5CBA5;
     --ligther-font-color: #84CD6E;
 }
 
@@ -197,7 +197,7 @@ nav {
     justify-content: center;
     margin: 0 12%;
     letter-spacing: 10px;
-    font-size: 3em;
+    font-size: 2em;
 
 }
 
@@ -356,7 +356,7 @@ nav {
 #skill-container {
     display: flex;
     flex-direction: column;
-    padding: 100px 600px;
+    padding: 5% 30%;
     justify-content: space-between;
     height: 80%;
 }
@@ -511,7 +511,7 @@ nav {
     width: 40%;
     height: 40%;
     justify-content: space-between;
-    padding: 80px 120px;
+    padding: 3% 4%;
     border-radius: 10px;
 }
 
