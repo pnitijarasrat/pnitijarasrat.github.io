@@ -5,6 +5,7 @@ const aboutmeBody = document.querySelector('.aboutme-body')
 const skillBackdrop = document.querySelector('#skill-backdrop')
 const skillBody = document.querySelector('.skill-body')
 const inventoryBody = document.querySelector('.inventory-body')
+const farewellBody = document.querySelector('.farewell-body')
 // content selector
 const profileContainer = document.querySelector('#profile-container')
 const homeContainer = document.querySelector('#headline')
@@ -29,6 +30,9 @@ const tutor = document.querySelector('#tutor')
 const port = document.querySelector('#port')
 const tutorFinder = document.querySelector('#tutorFinder')
 const portfolio = document.querySelector('#puriwatPortfolio')
+const farewellHeader = document.querySelector('#farewell-header')
+const plzvisit = document.querySelector('#plzvisit')
+const farewellUl = document.querySelector('#farewell-ul')
 // button selector
 const homeDown = document.querySelector('#arrowDownButton');
 const aboutmeUp = document.querySelector('#aboutmeArrowUp')
@@ -39,16 +43,47 @@ const skillUp = document.querySelector('#skillArrowUp')
 const skillDown = document.querySelector('#skillArrowDown')
 const invenUp = document.querySelector('#invenUp')
 const invenDown = document.querySelector('#invenDown')
-
-
-
-
+const farewellUp = document.querySelector('#farewellUp')
+// Path Selector
+const home = document.querySelector('.home')
+const prologue = document.querySelector('.prologue')
+const skill = document.querySelector('.skill')
+const inven = document.querySelector('.inven')
+const farewell = document.querySelector('.farewell')
+const navhome = document.querySelector('.nav-home')
+const navpro = document.querySelector('.nav-pro')
+const navskill = document.querySelector('.nav-skill')
+const navinven = document.querySelector('.nav-inven')
+const navfarewell = document.querySelector('.nav-farewell')
 
 function bindTest(el) {
     el.addEventListener('click', () => { console.log('clicked') })
 }
 
+// Path
+navhome.addEventListener('click', () => {
+    homeBody.scrollIntoView()
+})
+navpro.addEventListener('click', () => {
+    aboutmeBody.scrollIntoView();
+})
+navskill.addEventListener('click', () => {
+    skillBody.scrollIntoView();
+})
+navinven.addEventListener('click', () => {
+    inventoryBody.scrollIntoView();
+})
+navfarewell.addEventListener('click', () => {
+    farewellBody.scrollIntoView();
+})
+
+
 // What happen in Home Page
+
+home.className += ' disappear'
+setInterval(() => {
+    home.style.zIndex = -1
+}, 800);
 
 homeIntro.className = 'introAnimation'
 setInterval(() => {
@@ -63,6 +98,10 @@ setInterval(() => {
 }, 6500);
 
 homeDown.addEventListener('click', () => {
+    prologue.className += ' disappear'
+    setInterval(() => {
+        prologue.style.zIndex = -1
+    }, 800);
     aboutmeBody.scrollIntoView();
     setInterval(() => {
         aboutmeUp.style.visibility = 'visible'
@@ -106,6 +145,7 @@ aboutmeUp.addEventListener('click', () => {
 })
 
 aboutmeDown.addEventListener('click', () => {
+
     skillBackdrop.scrollIntoView();
 })
 
@@ -116,10 +156,18 @@ skillUp.addEventListener('click', () => {
 })
 
 skillDown.addEventListener('click', () => {
+    inven.className += ' disappear'
+    setInterval(() => {
+        inven.style.zIndex = -1
+    }, 800);
     inventoryBody.scrollIntoView();
 })
 
 hideBackdrop.addEventListener('click', () => {
+    skill.className += ' disappear'
+    setInterval(() => {
+        skill.style.zIndex = -1
+    }, 800);
     skillBackdrop.style.zIndex = -1
     html.className += ' vexperience'
     css.className += ' vexperience'
@@ -163,8 +211,31 @@ invenUp.addEventListener('click', () => {
 })
 
 invenDown.addEventListener('click', () => {
-
+    farewellBody.scrollIntoView();
+    farewell.className += ' disappear'
+    setInterval(() => {
+        farewell.style.zIndex = -1
+    }, 800);
+    farewellHeader.className = 'farewellAnimation'
+    setInterval(() => {
+        plzvisit.style.visibility = 'visible'
+        plzvisit.className = 'farewellAnimation'
+    }, 500);
+    setInterval(() => {
+        farewellUl.style.visibility = 'visible'
+        farewellUl.className = 'farewellAnimation'
+    }, 1000);
+    setInterval(() => {
+        farewellUp.style.visibility = 'visible'
+    }, 2500);
 })
+
+// Farewell Page
+farewellUp.addEventListener('click', () => {
+    inventoryBody.scrollIntoView();
+})
+
+
 
 
 

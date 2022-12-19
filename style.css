@@ -10,6 +10,11 @@
     --ligther-font-color: #84CD6E;
 }
 
+a {
+    background-color: inherit;
+    color: inherit;
+}
+
 * {
     background-color: var(--main-bg-color);
     color: var(--head-font-color);
@@ -21,7 +26,11 @@
     scroll-behavior: smooth;
     overflow: hidden;
     font-family: 'Press Start 2P', cursive;
-    text-shadow: 1px 1px var(--dark-bg-color);
+    text-shadow: 1.5px 1px var(--dark-bg-color);
+}
+
+.p-n {
+    padding-left: 10%;
 }
 
 html {
@@ -172,6 +181,12 @@ nav {
     font-size: 0.5em;
 }
 
+.cloud {
+    position: absolute;
+    left: 10%;
+    top: 2%;
+}
+
 .home-body {
     width: 100%;
     height: 100vh;
@@ -205,7 +220,7 @@ nav {
     border-right: .15em solid var(--head-font-color);
     white-space: nowrap;
     margin: 0 auto;
-    text-shadow: 7px 7px var(--dark-bg-color);
+    text-shadow: 0px 7px var(--dark-bg-color);
 }
 
 .introAnimation {
@@ -217,8 +232,14 @@ nav {
 .home-p2 {
     margin-bottom: 1%;
     visibility: hidden;
-    text-shadow: 2px 2px var(--dark-bg-color);
     padding: 10px;
+    text-shadow: 0px 2px var(--dark-bg-color);
+}
+
+.home-p2 {
+    background-color: var(--head-font-color);
+    color: var(--light-font-color);
+    text-shadow: 0px 4px var(--dark-bg-color);
 }
 
 @keyframes typewriter {
@@ -238,6 +259,7 @@ nav {
 
     to {
         border-right-color: transparent;
+
     }
 }
 
@@ -356,7 +378,7 @@ nav {
 #skill-container {
     display: flex;
     flex-direction: column;
-    padding: 5% 30%;
+    padding: 5% 20% 5% 30%;
     justify-content: space-between;
     height: 80%;
 }
@@ -389,7 +411,7 @@ nav {
 .level {
     padding: 5px;
     color: var(--head-font-color);
-    background-color: var(--light-font-color);
+    background-color: var(--normal-font-color);
 }
 
 
@@ -537,13 +559,13 @@ nav {
 
 .inventory-bag {
     width: 50%;
-    padding: 100px;
+    padding: 3%;
 }
 
 .inventory-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 2% 2%;
 }
 
 .inventory-item:hover {
@@ -595,4 +617,142 @@ span {
 
 #invenDown {
     animation: arrowDownButtonAnimation 1000ms infinite;
+}
+
+/* Path Style */
+
+.path-bar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--head-font-color);
+}
+
+.path-bar div,
+.lock {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-font-color);
+    background-color: var(--head-font-color);
+    transition: 300ms;
+}
+
+.path-bar div:hover {
+    color: var(--head-font-color);
+    background-color: var(--light-font-color);
+}
+
+.lock {
+    position: fixed;
+    z-index: 1;
+    width: 10%;
+}
+
+.home {
+    top: 0;
+}
+
+.prologue {
+    top: 20vh;
+}
+
+.skill {
+    top: 40vh;
+}
+
+.inven {
+    top: 60vh;
+}
+
+.farewell {
+    top: 80vh;
+}
+
+.disappear {
+    animation: disappear 1000ms;
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+/* Farewell Style */
+
+.farewell-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#farewell-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 10%;
+    row-gap: 7%;
+}
+
+#farewell-ul,
+#plzvisit {
+    visibility: hidden;
+}
+
+#farewell-ul {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+
+#farewell-ul div {
+    padding: 10% 20%;
+    width: 300px;
+}
+
+#farewell-ul div:hover {
+    background-color: var(--head-font-color);
+    color: var(--light-font-color);
+}
+
+
+.farewellAnimation {
+    animation: farewellAnimation 1000ms;
+}
+
+#farewellUp {
+    animation: arrowUpButtonAnimation 1000ms infinite;
+    visibility: hidden;
+}
+
+@keyframes farewellAnimation {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    33% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
 }

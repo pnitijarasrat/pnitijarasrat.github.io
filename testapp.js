@@ -1,24 +1,13 @@
-const tutor = document.querySelector('#tutor')
-const port = document.querySelector('#port')
-const tutorFinder = document.querySelector('#tutorFinder')
-const portfolio = document.querySelector('#puriwatPortfolio')
+const farewellHeader = document.querySelector('#farewell-header')
+const farewellUl = document.querySelector('#farewell-ul')
+const plzvisit = document.querySelector('#plzvisit')
 
-tutor.addEventListener('mouseover', () => {
-    tutorFinder.style.zIndex = 1
-})
-
-tutor.addEventListener('mouseleave', () => {
-    tutorFinder.style.zIndex = -1
-})
-
-port.addEventListener('mouseover', () => {
-    portfolio.style.zIndex = 1
-})
-
-port.addEventListener('mouseleave', () => {
-    portfolio.style.zIndex = -1
-})
-
-
-
-
+farewellHeader.className = 'farewellAnimation'
+setInterval(() => {
+    plzvisit.style.visibility = 'visible'
+    plzvisit.className = 'farewellAnimation'
+}, 500);
+setInterval(() => {
+    farewellUl.style.visibility = 'visible'
+    farewellUl.className = 'farewellAnimation'
+}, 1000);
