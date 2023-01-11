@@ -28,8 +28,10 @@ const php = document.querySelector('.php')
 const sql = document.querySelector('.sql')
 const tutor = document.querySelector('#tutor')
 const port = document.querySelector('#port')
+const expenseApp = document.querySelector('#expenseApp')
 const tutorFinder = document.querySelector('#tutorFinder')
 const portfolio = document.querySelector('#puriwatPortfolio')
+const expenseProject = document.querySelector('#expenseProject')
 const farewellHeader = document.querySelector('#farewell-header')
 const plzvisit = document.querySelector('#plzvisit')
 const farewellUl = document.querySelector('#farewell-ul')
@@ -57,24 +59,24 @@ const navinven = document.querySelector('.nav-inven')
 const navfarewell = document.querySelector('.nav-farewell')
 
 function bindTest(el) {
-    el.addEventListener('click', () => { console.log('clicked') })
+  el.addEventListener('click', () => { console.log('clicked') })
 }
 
 // Path
 navhome.addEventListener('click', () => {
-    homeBody.scrollIntoView()
+  homeBody.scrollIntoView()
 })
 navpro.addEventListener('click', () => {
-    aboutmeBody.scrollIntoView();
+  aboutmeBody.scrollIntoView();
 })
 navskill.addEventListener('click', () => {
-    skillBody.scrollIntoView();
+  skillBody.scrollIntoView();
 })
 navinven.addEventListener('click', () => {
-    inventoryBody.scrollIntoView();
+  inventoryBody.scrollIntoView();
 })
 navfarewell.addEventListener('click', () => {
-    farewellBody.scrollIntoView();
+  farewellBody.scrollIntoView();
 })
 
 
@@ -82,157 +84,165 @@ navfarewell.addEventListener('click', () => {
 
 home.className += ' disappear'
 setInterval(() => {
-    home.style.zIndex = -1
+  home.style.zIndex = -1
 }, 800);
 
 homeIntro.className = 'introAnimation'
 setInterval(() => {
-    homeP1.style.visibility = 'visible'
+  homeP1.style.visibility = 'visible'
 }, 3500);
 setInterval(() => {
-    homeP2.style.visibility = 'visible'
+  homeP2.style.visibility = 'visible'
 }, 5000);
 
 setInterval(() => {
-    homeDown.style.visibility = 'visible'
+  homeDown.style.visibility = 'visible'
 }, 6500);
 
 homeDown.addEventListener('click', () => {
-    prologue.className += ' disappear'
-    setInterval(() => {
-        prologue.style.zIndex = -1
-    }, 800);
-    aboutmeBody.scrollIntoView();
-    setInterval(() => {
-        aboutmeUp.style.visibility = 'visible'
-        aboutmeDown.style.visibility = 'visible'
-    }, 18000);
-    setInterval(() => {
-        p1.style.opacity = 1
-        p1.className = 'aboutmeAnimation'
-    }, 1000);
-    setInterval(() => {
-        p2.style.opacity = 1
-        p2.className = 'aboutmeAnimation'
-    }, 3000);
-    setInterval(() => {
-        p3.style.opacity = 1
-        p3.className = 'aboutmeAnimation'
-    }, 5000);
-    setInterval(() => {
-        p4.style.opacity = 1
-        p4.className = 'aboutmeAnimation'
-    }, 7000);
-    setInterval(() => {
-        p5.style.opacity = 1
-        p5.className = 'aboutmeAnimation'
-    }, 12000);
-    setInterval(() => {
-        p6.style.opacity = 1
-        p6.className = 'aboutmeAnimation'
-    }, 14000);
+  prologue.className += ' disappear'
+  setInterval(() => {
+    prologue.style.zIndex = -1
+  }, 800);
+  aboutmeBody.scrollIntoView();
+  setInterval(() => {
+    aboutmeUp.style.visibility = 'visible'
+    aboutmeDown.style.visibility = 'visible'
+  }, 18000);
+  setInterval(() => {
+    p1.style.opacity = 1
+    p1.className = 'aboutmeAnimation'
+  }, 1000);
+  setInterval(() => {
+    p2.style.opacity = 1
+    p2.className = 'aboutmeAnimation'
+  }, 3000);
+  setInterval(() => {
+    p3.style.opacity = 1
+    p3.className = 'aboutmeAnimation'
+  }, 5000);
+  setInterval(() => {
+    p4.style.opacity = 1
+    p4.className = 'aboutmeAnimation'
+  }, 7000);
+  setInterval(() => {
+    p5.style.opacity = 1
+    p5.className = 'aboutmeAnimation'
+  }, 12000);
+  setInterval(() => {
+    p6.style.opacity = 1
+    p6.className = 'aboutmeAnimation'
+  }, 14000);
 })
 
 // What happen in about me page
 
 aboutmeUp.addEventListener('click', () => {
-    homeBody.scrollIntoView();
-    homeIntro.className = 'introAnimation'
-    setInterval(() => {
-        homeP.style.visibility = 'visible'
-    }, 4000);
+  homeBody.scrollIntoView();
+  homeIntro.className = 'introAnimation'
+  setInterval(() => {
+    homeP.style.visibility = 'visible'
+  }, 4000);
 
 })
 
 aboutmeDown.addEventListener('click', () => {
 
-    skillBackdrop.scrollIntoView();
+  skillBackdrop.scrollIntoView();
 })
 
 // What happen in skill page
 
 skillUp.addEventListener('click', () => {
-    aboutmeBody.scrollIntoView();
+  aboutmeBody.scrollIntoView();
 })
 
 skillDown.addEventListener('click', () => {
-    inven.className += ' disappear'
-    setInterval(() => {
-        inven.style.zIndex = -1
-    }, 800);
-    inventoryBody.scrollIntoView();
+  inven.className += ' disappear'
+  setInterval(() => {
+    inven.style.zIndex = -1
+  }, 800);
+  inventoryBody.scrollIntoView();
 })
 
 hideBackdrop.addEventListener('click', () => {
-    skill.className += ' disappear'
-    setInterval(() => {
-        skill.style.zIndex = -1
-    }, 800);
-    skillBackdrop.style.zIndex = -1
-    html.className += ' vexperience'
-    css.className += ' vexperience'
-    js.className += ' skillful'
-    react.className += ' beginner'
-    python.className += ' skillful'
-    php.className += ' experience'
-    sql.className += ' experience'
+  skill.className += ' disappear'
+  setInterval(() => {
+    skill.style.zIndex = -1
+  }, 800);
+  skillBackdrop.style.zIndex = -1
+  html.className += ' vexperience'
+  css.className += ' vexperience'
+  js.className += ' skillful'
+  react.className += ' beginner'
+  python.className += ' skillful'
+  php.className += ' experience'
+  sql.className += ' experience'
 })
 
 viewBackdrop.addEventListener('click', () => {
-    skillBackdrop.style.zIndex = 1;
-    html.className = 'level html'
-    css.className = 'level css'
-    js.className = 'level js'
-    react.className = 'level react'
-    python.className = 'level python'
-    php.className = 'level php'
-    sql.className = 'level sql'
+  skillBackdrop.style.zIndex = 1;
+  html.className = 'level html'
+  css.className = 'level css'
+  js.className = 'level js'
+  react.className = 'level react'
+  python.className = 'level python'
+  php.className = 'level php'
+  sql.className = 'level sql'
 })
 
 // What happen in inventory page
 tutor.addEventListener('mouseover', () => {
-    tutorFinder.style.zIndex = 1
+  tutorFinder.style.zIndex = 1
 })
 
 tutor.addEventListener('mouseleave', () => {
-    tutorFinder.style.zIndex = -1
+  tutorFinder.style.zIndex = -1
 })
 
 port.addEventListener('mouseover', () => {
-    portfolio.style.zIndex = 1
+  portfolio.style.zIndex = 1
 })
 
 port.addEventListener('mouseleave', () => {
-    portfolio.style.zIndex = -1
+  portfolio.style.zIndex = -1
+})
+
+expenseApp.addEventListener('mouseover', () => {
+  expenseProject.style.zIndex = 1
+})
+
+expenseApp.addEventListener('mouseleave', () => {
+  expenseProject.style.zIndex = -1
 })
 
 invenUp.addEventListener('click', () => {
-    skillBackdrop.scrollIntoView();
+  skillBackdrop.scrollIntoView();
 })
 
 invenDown.addEventListener('click', () => {
-    farewellBody.scrollIntoView();
-    farewell.className += ' disappear'
-    setInterval(() => {
-        farewell.style.zIndex = -1
-    }, 800);
-    farewellHeader.className = 'farewellAnimation'
-    setInterval(() => {
-        plzvisit.style.visibility = 'visible'
-        plzvisit.className = 'farewellAnimation'
-    }, 500);
-    setInterval(() => {
-        farewellUl.style.visibility = 'visible'
-        farewellUl.className = 'farewellAnimation'
-    }, 1000);
-    setInterval(() => {
-        farewellUp.style.visibility = 'visible'
-    }, 2500);
+  farewellBody.scrollIntoView();
+  farewell.className += ' disappear'
+  setInterval(() => {
+    farewell.style.zIndex = -1
+  }, 800);
+  farewellHeader.className = 'farewellAnimation'
+  setInterval(() => {
+    plzvisit.style.visibility = 'visible'
+    plzvisit.className = 'farewellAnimation'
+  }, 500);
+  setInterval(() => {
+    farewellUl.style.visibility = 'visible'
+    farewellUl.className = 'farewellAnimation'
+  }, 1000);
+  setInterval(() => {
+    farewellUp.style.visibility = 'visible'
+  }, 2500);
 })
 
 // Farewell Page
 farewellUp.addEventListener('click', () => {
-    inventoryBody.scrollIntoView();
+  inventoryBody.scrollIntoView();
 })
 
 
